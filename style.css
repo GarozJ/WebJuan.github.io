@@ -348,83 +348,96 @@ header {
 
 /* Móvil */
   
-  @media screen and (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    .navbar {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--black);
-      position: absolute;
-      top: 100%;
-      left: 0;
-      padding: 1rem 0;
-      z-index: 999;
-    }
-  
-    .navbar.active {
-      display: flex;
-    }
-  
-    .navbar li {
-      text-align: center;
-      padding: 10px 0;
-    }
-  .menu-toggle {
-    display: block;
+@media (min-width: 577px) and (max-width: 992px) {
+  section {
+    padding: 70px 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    position: static;
+    padding: 30px 50px;
+  }
+
+  header .navbar li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .contenido {
     flex-direction: column;
-    gap: 2rem;
-    text-align: center;
   }
 
-  .imgBox {
+  .contenido .tituloBox {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .contenido .imgBox {
     justify-content: center;
+    padding-right: 0;
+    margin: 0;
   }
 
-  .imgBox img {
-    height: 50vh;
+  .contenido .imgBox img {
+    height: 60vh;
   }
 
-  .tituloBox h2,
-  .tituloBox h3,
-  .tituloBox p {
+  .copyright {
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 30px;
     text-align: center;
+    margin-left: 0;
+  }
+
+  .copyright p {
+    margin: 40px 0;
   }
 
   .redesSociales {
+    flex-direction: row;
+    align-items: center;
     position: static;
-    justify-content: center;
-    padding: 1rem 0;
   }
 
-  .sobremi {
+  .projects_container div {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .projects_wrapper div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects_card img {
     width: 100%;
+    height: auto;
   }
 
-  .formulario-wrapper,
-  .sobremi-wrapper {
+  .contact_wrapper {
+    margin: 20px 0;
+  }
+
+  .cv_container,
+  .aboutme_container {
+    width: 100%;
     padding: 20px;
   }
 
-  .pdf-container iframe {
-    width: 100%;
+  iframe {
     height: 500px;
-    transform: none;
-    margin: 0 auto;
   }
 
-  .cv-wrapper h1 {
-    font-size: 2rem;
+  .circle {
+    display: none;
   }
-
-  .tituloBox a {
-    display: inline-block;
-    width: auto;
+  .rectangle {
+    clip-path: inset(0 0 0 0);
   }
 }
