@@ -440,4 +440,55 @@ header {
   .rectangle {
     clip-path: inset(0 0 0 0);
   }
+  
+  @media (max-width: 576px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--black);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1rem 0;
+      z-index: 999;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  
+    .navbar li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .imgBox img {
+      height: 45vh;
+    }
+  
+    .sobremi, .formulario, .proyectos-wrapper {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .pdf-container iframe {
+      width: 100%;
+      transform: none;
+      margin-left: 0;
+    }
+  
+    header {
+      flex-wrap: wrap;
+    }
+  }
 }
