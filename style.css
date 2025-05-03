@@ -273,7 +273,7 @@ header {
 .proyectos-wrapper h1 {
   font-size: 2.5em;
   margin-bottom: 40px;
-  color: blue;
+  color:  #007acc;
 }
 
 .proyectos-grid {
@@ -329,7 +329,7 @@ header {
 .cv-wrapper h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: blue;
+  color:  #007acc;
 }
 
 .pdf-container {
@@ -440,8 +440,15 @@ header {
   .rectangle {
     clip-path: inset(0 0 0 0);
   }
-  
+}
   @media (max-width: 576px) {
+    .tituloBox {
+      max-width: 90%;
+    }
+    .imgBox img {
+      max-width: 90%;
+      height: auto;
+    }
     .menu-toggle {
       display: block;
     }
@@ -491,4 +498,3 @@ header {
       flex-wrap: wrap;
     }
   }
-}
