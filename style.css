@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+  --white: whitesmoke;
+  --black: rgb(10, 10, 10);
+  --bg: #0a0a0a;
+  --bg-overlay: rgba(0, 0, 0, 0.65);
+  --highlight: rgba(199, 21, 21, 0.808);
+  --shadow: rgba(0, 0, 0, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+}
+
+body {
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 5vw;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2vh 5vw;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo-img {
+  height: 45px;
+}
+
+.menu-toggle {
+  display: none; 
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: .6rem 1rem;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.navbar a:hover {
+  border-bottom: 3px solid var(--highlight);
+}
+
+.contenido {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.tituloBox {
+  max-width: 660px;
+}
+
+.tituloBox h2 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  color: black;
+}
+
+.tituloBox h3 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.tituloBox h3 span {
+  background: var(--highlight);
+  padding: .5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.tituloBox p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tituloBox a {
+  text-decoration: none;
+  background: var(--highlight);
+  padding: .7rem 1.7rem;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background .25s, transform .25s;
+}
+
+.tituloBox a:hover {
+  background: var(--white);
+  color: var(--black);
+  transform: scale(1.15);
+}
+
+.imgBox {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imgBox img {
+  height: 70vh;
+  transition: transform .3s;
+}
+
+.imgBox img:hover {
+  transform: scale(1.15);
+}
+
+.copyright {
+  width: 100%;
+  background-color: var(--black);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: .9rem;
+}
+
+.redesSociales {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 4rem 2rem;
+  list-style: none;
+}
+
+.redesSociales a {
+  font-size: 2.2rem;
+  transition: .3s;
+}
+
+.redesSociales a:hover {
+  color: var(--highlight);
+}
+
+.sobremi {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: var(--black);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sobremi p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+.sobremi-wrapper {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;    
+  align-items: center; 
+  padding: 40px;      
+}
+
+
+.formulario-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.formulario {
+  background-color: black;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.formulario h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #555;
+}
+
+.proyectos-wrapper {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: #222;
+}
+
+.proyectos-wrapper h1 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: blue;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.proyecto {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.proyecto h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+.proyecto p {
+  font-size: 1em;
+  color: #555;
+}
+
+.proyecto a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.proyecto a:hover {
+  color: #005f99;
+}
+
+.cv-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cv-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: blue;
+}
+
+.pdf-container {
+  width: 100%;
+  text-align: center;
+}
+
+.pdf-container iframe {
+  width: 200%;
+  height: 700px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+  .imgBox { justify-content: center; }
+  .imgBox img { height: 55vh; }
+}
+
+/* Móvil */
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+  }
+  .menu-toggle { display: block; }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .navbar.active { display: flex; }
+  .contenido { gap: 2rem; }
+  .imgBox img { height: 40vh; }
+  .redesSociales { position: static; padding: 2rem 0; }
+  .copyright { font-size: .8rem; }
+}
