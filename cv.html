@@ -49,7 +49,14 @@
         </li>
       </ul>
     </section>
-    <script src="./index.js"></script>
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navBar = document.getElementById('navbar');
+
+    toggleBtn.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+    });
+  </script>
   </body>
   <footer class="copyright">
     © Web personal creada para la materia de Lenguaje de Marcas del CFGS DAW
