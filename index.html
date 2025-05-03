@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="style.css" />
     <title>Juan Moreno Garoz - Periodista</title>
   </head>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navBar = document.getElementById('navbar');
+  
+    toggleBtn.addEventListener('click', () => {
+      navBar.classList.toggle('active');
+    });
+  </script>
   <body>
     <section>
       <div class="square"></div>
@@ -17,9 +25,9 @@
           <img src="img/logo.png" alt="Logo Juan" class="logo-img" />
         </a>
         <div class="menu-toggle" id="menu-toggle">☰</div>
-        <ul class="navbar">
+        <ul class="navbar" id="navbar">
           <li><a href="sobremi.html">Sobre mí</a></li>
-          <li><a href="cv.html">CV</a></li>
+          <li><a href="CV.html">CV</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
